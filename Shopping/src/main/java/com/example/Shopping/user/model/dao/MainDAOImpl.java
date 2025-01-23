@@ -12,7 +12,7 @@ public class MainDAOImpl implements MainDAO {
 	SqlSession sqlSession;
 	
 	@Override
-	public String main(MainDTO dto) {
-		return sqlSession.selectOne("main.main",dto);
+	public MainDTO main(String userid) {
+		return sqlSession.selectOne("main.main",userid);
 	}
 }

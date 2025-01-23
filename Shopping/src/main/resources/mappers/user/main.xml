@@ -3,7 +3,7 @@
 <mapper namespace="main">
 
 	<select id="main" resultType="com.example.Shopping.user.model.dto.MainDTO">
-		select * from test
+		select * from test where userid = #{userid}
 	</select>
 	
 </mapper>

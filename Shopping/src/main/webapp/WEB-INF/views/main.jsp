@@ -8,11 +8,15 @@
 </head>
 <body>
 	<a>주니 라뷰</a>
-	<th>${dto.userid}</th>
-	<th>${dto.passwd}</th>
-	<th>${dto.name}</th>
-	<th>${dto.email}</th>
-	<th>${dto.join_date}</th>
-	<th>${message}</th>
+	<table border="1">
+		<tr>
+			<td>${map.dto.userid}</td>
+			<td>${map.dto.passwd}</td>
+			<td>${map.dto.name}</td>
+			<td>${map.dto.email}</td>
+			<td>${map.dto.join_date}</td>
+			<td>${message}</td>
+		</tr>
+	</table>
 </body>
 </html>
