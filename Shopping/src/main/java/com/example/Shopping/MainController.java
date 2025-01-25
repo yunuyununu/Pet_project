@@ -31,16 +31,17 @@ public class MainController {
 //        return "main";
 //    }
 	
+	//홈페이지 메인화면
 	@GetMapping("/")
     public ModelAndView home() {
 		MainDTO dto = dao.main("kim");
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("main");
+		mav.setViewName("admin/admain");
 		Map<String,Object> map = new HashMap<>();
 		map.put("dto", dto);
 		mav.addObject("map", map);
         mav.addObject("message", "Hello, Spring Boot!");
-        System.out.println("디티오="+dto);
+        //System.out.println("디티오="+dto);
         return mav;
     }
 }

@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a>주니 라뷰</a>
+	<a>DB 연결 및 화면로딩 확인</a>
 	<table border="1">
 		<tr>
 			<td>${map.dto.userid}</td>
