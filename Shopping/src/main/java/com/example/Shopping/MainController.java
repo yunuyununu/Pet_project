@@ -36,7 +36,7 @@ public class MainController {
     public ModelAndView home() {
 		MainDTO dto = dao.main("kim");
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("admin/admain");
+		mav.setViewName("home");
 		Map<String,Object> map = new HashMap<>();
 		map.put("dto", dto);
 		mav.addObject("map", map);

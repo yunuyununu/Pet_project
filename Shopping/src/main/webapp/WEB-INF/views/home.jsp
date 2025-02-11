@@ -16,10 +16,13 @@
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 </head>
 <body>
-<div id="header-wrapper">
+
+<div id="header"><%@ include file="./common/header.jsp"%></div>
+
+<!-- <div id="header-wrapper">
 	<div id="header" class="container">
 		<div id="logo">
-			<h1><a href="#">Soft String</a></h1>
+			<h1><a href="#">Pet Shop</a></h1>
 		</div>
 		<div id="menu">
 			<ul><li class="current_page_item"><a href="#" accesskey="1" title="">Homepage</a></li>
@@ -29,8 +32,8 @@
 				<li><a href="#" accesskey="5" title="">Contact Us</a></li>
 			</ul></div>
 	</div>
+</div> -->
 	<div id="banner" class="container"><img src="/resources/images/banner.jpg" width="1200" height="400" alt=""></div>
-</div>
 <div id="page-wrapper">
 	<div id="page" class="container">
 		<div id="content">
@@ -107,7 +110,7 @@
 		<p>This is <strong>Soft String</strong>, a free, fully standards-compliant CSS template designed by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. The photos in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so you're pretty much free to do whatever you want with it (even use it commercially) provided you give us credit for it. Have fun :) </p>
 	</div>
 </div>
-<div id="copyright" class="container">
+<!-- <div id="copyright" class="container">
 		<ul class="contact"><li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
 			<li><a href="#" class="icon icon-facebook"><span></span></a></li>
 			<li><a href="#" class="icon icon-dribbble"><span>Pinterest</span></a></li>
@@ -116,7 +119,8 @@
 		</ul></div>
 <div class="copyright">
 	Design by: <a href="https://templated.co/">TEMPLATED.CO</a>
-</div>
+</div> -->
+<div id="footer"><%@ include file="./common/footer.jsp"%></div>
 
 </body>
 </html>

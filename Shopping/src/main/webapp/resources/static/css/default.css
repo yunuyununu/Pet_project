@@ -7,7 +7,7 @@
 	{
 		margin: 0px;
 		padding: 0px;
-		background: #E4C65D;
+		/* background: #E4C65D; */
 		font-family: 'Questrial', sans-serif;
 		font-size: 12pt;
 		color: rgba(0,0,0,.6);
@@ -239,7 +239,7 @@
 	ul.contact li a:before
 	{
 		display: inline-block;
-		background: #E2AD1C;
+		background: pink;
 		width: 40px;
 		height: 40px;
 		line-height: 40px;
@@ -541,6 +541,7 @@
 		padding: 5em 0em;
 		border-top: 1px solid rgba(255,255,255,0.08);
 		text-align: center;
+		background: #F67C78;
 	}
 	
 	#copyright p
