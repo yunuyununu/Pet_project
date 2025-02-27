@@ -33,7 +33,7 @@
 			</ul></div>
 	</div>
 </div> -->
-	<div id="banner" class="container"><img src="/resources/images/banner.jpg" width="1200" height="400" alt=""></div>
+	<div id="banner" class="container"><img src="/resources/images/banner_sb.jpeg" width="1200" height="400" alt=""></div>
 <div id="page-wrapper">
 	<div id="page" class="container">
 		<div id="content">
