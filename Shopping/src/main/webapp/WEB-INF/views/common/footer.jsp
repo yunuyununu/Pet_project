@@ -12,6 +12,11 @@
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900%7CQuicksand:400,700%7CQuestrial" rel="stylesheet">
 <link href="/resources/static/css/default.css" rel="stylesheet" type="text/css" media="all">
 <link href="/resources/static/css/fonts.css" rel="stylesheet" type="text/css" media="all">
+<script>
+function loginCheck(){
+	location.href="/admin/login.do";
+}
+</script>
 </head>
 <body>
 
@@ -22,6 +27,7 @@
 			<li><a href="#" class="icon icon-dribbble"><span>Pinterest</span></a></li>
 			<li><a href="#" class="icon icon-tumblr"><span>Google+</span></a></li>
 			<li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
+			<li><a href="#" onclick="loginCheck()">통합관리시스템</a></li>
 		</ul>
 	</div>
 </div>

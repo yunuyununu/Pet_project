@@ -7,9 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="/resources/images/img/apple-icon.png">
   <link rel="icon" type="image/png" href="/resources/images/img/favicon.png">
-  <title>
-    Argon Dashboard 3 by Creative Tim
-  </title>
+  <title>Admin Management System</title>
 
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -20,6 +18,14 @@
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
   <!-- CSS Files -->
   <link id="pagestyle" href="/resources/static/css/argon-dashboard.css?v=2.1.0" rel="stylesheet" />
+<script>
+function logout(){
+	if(confirm("로그아웃 하시겠습니까?")){
+		location.href = '/admin/adlogout.do';
+	}
+}
+
+</script>
 </head>
 
 <body class="g-sidenav-show   bg-gray-100">
@@ -28,8 +34,8 @@
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html " target="_blank">
-        <img src="/resources/images/img/logo-ct-dark.png" width="26px" height="26px" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold">Creative Tim</span>
+       	<img src="/resources/images/img/logo-ct-dark.png" width="26px" height="26px" class="navbar-brand-img h-100" alt="main_logo">
+       	<span class="ms-1 font-weight-bold"><%=session.getAttribute("a_name") %>님</span>
       </a>
     </div>
     <hr class="horizontal dark mt-0">
@@ -140,12 +146,15 @@
             <li class="nav-item d-flex align-items-center">
               <a href="javascript:;" class="nav-link text-white font-weight-bold px-0">
                 <i class="fa fa-user me-sm-1"></i>
-                <span class="d-sm-inline d-none">Sign In</span>
+                <span class="d-sm-inline d-none"><%=session.getAttribute("a_name") %></span>
+              	<!-- d-sm-inline d-none => 작은 화면(sm) 이상에서는 표시, 작은 화면에서는 숨김 -->
               </a>
             </li>
             <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+            <!-- d-xl-none => 화면 크기 XL 이상일 때 숨김 -->
               <a href="javascript:;" class="nav-link text-white p-0" id="iconNavbarSidenav">
                 <div class="sidenav-toggler-inner">
+                <!-- sidenav-toggler-inner => 사이드바 토글 아이콘(햄버거 메뉴 모양 3줄) -->
                   <i class="sidenav-toggler-line bg-white"></i>
                   <i class="sidenav-toggler-line bg-white"></i>
                   <i class="sidenav-toggler-line bg-white"></i>
@@ -153,8 +162,10 @@
               </a>
             </li>
             <li class="nav-item px-3 d-flex align-items-center">
-              <a href="javascript:;" class="nav-link text-white p-0">
-                <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
+              <a class="nav-link text-white p-0" onclick="logout()" style="cursor:pointer;">Logout
+                <!-- <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i> -->
+                <!-- <button type="button" class="btn btn-light">Logout</button>
+                <a class="nav-link " href="../pages/sign-up.html"></a> -->
               </a>
             </li>
             <li class="nav-item dropdown pe-2 d-flex align-items-center">

@@ -5,12 +5,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class MainDAOImpl implements MainDAO {
+public class MemberDAOImpl implements MemberDAO {
+	
 	@Autowired
 	SqlSession sqlSession;
 	
-//	@Override
-//	public MainDTO main(String userid) {
-//		return sqlSession.selectOne("main.main",userid);
-//	}
+	@Override  // 아이디 중복체크
+	public int id_check(String m_id) {
+		 return sqlSession.selectOne("member.id_check", m_id);
+	}
 }

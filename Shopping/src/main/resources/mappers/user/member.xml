@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member">
+
+	<!--회원가입 -->
+<!-- 	<insert id="insert_join">
+		insert into sl_member (m_no,m_name,m_id,m_passwd,
+		m_tel,
+		m_address,m_email,m_birth_date,m_zip_no,m_detail_address,m_img)
+		values (
+		sl_member_seq.nextval,
+		#{m_name},
+		#{m_id},
+		#{m_passwd},
+		#{m_tel},
+		#{m_address},
+		#{m_email}, 
+		#{m_birth_date},
+		#{m_zip_no},
+		#{m_detail_address},
+		#{m_img}
+		)
+	</insert> -->
+
+	<!-- 아이디 중복체크 -->
+	<select id="id_check" resultType="int">
+		SELECT count(*) FROM member
+		WHERE m_id = #{m_id}
+	</select>
+
+</mapper>

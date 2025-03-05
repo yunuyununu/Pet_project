@@ -1,15 +1,11 @@
 package com.example.Shopping;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.Shopping.user.model.dao.MainDAO;
-import com.example.Shopping.user.model.dto.MainDTO;
 
 @Controller
 //@RequestMapping("user/")
@@ -34,14 +30,21 @@ public class MainController {
 	//홈페이지 메인화면
 	@GetMapping("/")
     public ModelAndView home() {
-		MainDTO dto = dao.main("kim");
+		//MainDTO dto = dao.main("kim");
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("home");
-		Map<String,Object> map = new HashMap<>();
-		map.put("dto", dto);
-		mav.addObject("map", map);
-        mav.addObject("message", "Hello, Spring Boot!");
+//		Map<String,Object> map = new HashMap<>();
+//		map.put("dto", dto);
+//		mav.addObject("map", map);
+        //mav.addObject("message", "Hello, Spring Boot!");
         //System.out.println("디티오="+dto);
         return mav;
     }
+	
+	@GetMapping("/loginpage")
+	public ModelAndView loginPage() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("user/user_login");
+		return mav;
+	}
 }
